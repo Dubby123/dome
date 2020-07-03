@@ -1,0 +1,188 @@
+//边框颜色
+$border_color: #dcdcdc;
+//主背景颜色
+$main_bg_color: rgba(255, 255, 255, 0.75);
+//白色
+$white_color: #fff;
+//列表标题字体颜色
+$table_title_color: #37474f;
+//列表字体颜色
+$main_text_color: #526069;
+//列表头背景色
+$table_stripe_bg: #ecf1f2;
+//列表树结构等选中、hover、focus背景色
+$hover_bg_color: #3e8ef7;
+
+//列表查询栏样式
+.search_form {
+    &.el-header {
+        height: 64px !important;
+        padding: 16px;
+        border-radius: 2px;
+        background-color: $main_bg_color;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    }
+    .el-row + .el-row {
+        margin-bottom: 10px;
+    }
+    .el-col > .el-button {
+        float: right;
+    }
+    .el-form-item {
+        margin-bottom: 0px;
+        margin-right: 10px;
+    }
+    .el-form-item__label {
+        height: 34px;
+        color: #76838f;
+        background-color: #f5f5f5;
+        border: 1px solid $border_color;
+        text-align: center;
+        padding-right: 0;
+        font-size: 13px;
+        border-right: 0;
+        border-radius: 2px 0 0 2px;
+    }
+    .el-form-item__content {
+        .el-input .el-input__inner {
+            width: 150px;
+            height: 34px;
+            line-height: 32px;
+            border-radius: 0px 2px 2px 0;
+            border: 1px solid $border_color;
+            font-size: 14px;
+        }
+    }
+}
+.search_form .none-style.el-form-item {
+    background-color: $white_color;
+}
+.search_form .none-style.el-form-item .el-form-item__label {
+    border: none;
+}
+
+//列表块样式
+.main_table {
+    padding: 0;
+    margin: 15px 0 2px;
+    background-color: $main_bg_color;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+.table_box {
+    height: 100%;
+    background-color: transparent;
+    padding: 0 16px 16px;
+    box-sizing: border-box;
+    .table_header {
+        height: 64px !important;
+        line-height: 32px !important;
+        color: $table_title_color;
+        padding: 16px 0;
+        font-size: 16px;
+        text-indent: 20px;
+        position: relative;
+        .table_title::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background-color: $hover_bg_color;
+            border-radius: 4px;
+            position: absolute;
+            left: 0px;
+            top: 24px;
+        }
+        .table_btns {
+            float: right;
+        }
+    }
+    .table_content {
+        padding: 0;
+    }
+}
+
+.el-table {
+    background-color: transparent;
+    border: 1px solid $border_color;
+    th {
+        background-color: $table_stripe_bg;
+        color: $table_title_color;
+        font-weight: bold;
+        &.is-leaf {
+            border-bottom: 1px solid $border_color;
+        }
+    }
+    td {
+        height: 36px;
+    }
+    &.el-table--small {
+        th,
+        td {
+            padding: 6px 0;
+        }
+    }
+    &::before {
+        height: 0px;
+    }
+}
+.el-table--striped .el-table__body tr {
+    &:hover td {
+        background-color: $hover_bg_color;
+        color: $white_color;
+    }
+    &:hover .el-button--text {
+        color: $white_color;
+    }
+    &.current-row > td {
+        background-color: $hover_bg_color;
+        color: $white_color;
+    }
+    &.el-table__row--striped {
+        td {
+            background-color: $table_stripe_bg;
+        }
+        &:hover td {
+            background-color: $hover_bg_color;
+        }
+        &.current-row > td {
+            background-color: $hover_bg_color;
+        }
+    }
+}
+
+//分页栏样式
+.table_footer {
+    padding: 8px 16px;
+    margin-top: 16px;
+    background-color: $table_stripe_bg;
+    border: 1px solid $border_color;
+    border-radius: 2px;
+}
+.el-pagination {
+    text-align: right;
+    .el-pagination__total,
+    .el-pagination__sizes {
+        float: left;
+    }
+    &.is-background {
+        .btn-prev,
+        .btn-next {
+            border: 1px solid $border_color;
+            background-color: $white_color;
+            min-width: 65px;
+        }
+        .btn-prev:disabled {
+            color: #a3afb7;
+        }
+        .el-pager li {
+            background-color: $white_color;
+            border: 1px solid $border_color;
+            &:not(.disabled).active {
+                background-color: $hover_bg_color;
+                border-color: $hover_bg_color;
+            }
+        }
+    }
+    .el-input__inner {
+        border: 1px solid $border_color;
+    }
+}

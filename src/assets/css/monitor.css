@@ -1,0 +1,54 @@
+/* 链路图的样式 */
+.monitor-box {
+    display: flex;
+    height: 550px;
+    overflow: auto;
+}
+.monitor-box .tree-box {
+    width: 240px;
+    padding-bottom: 30px;
+    position: relative;
+    border: 1px solid rgb(221, 225, 226);
+}
+.monitor-box .el-pagination {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    width: 100px!important;
+}
+.monitor-box .el-pagination .el-pager{
+    margin: 0 -10px;
+}
+.monitor-box .el-pagination .el-pager li{
+    padding: 0;
+    margin: 0 -5px;
+}
+.monitor-box .data-box {
+    flex: 1;
+    border: 1px solid rgb(221, 225, 226);
+}
+.monitor-content {
+    display: flex;
+    border-bottom: 1px solid rgb(221, 225, 226);
+    cursor: pointer;
+    padding: 3px;
+}
+.monitor-content .monitor-main div {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.monitor-content .monitor-main .time-box {
+    color: #c4ccd1;
+}
+.monitor-box .latency-box span {
+    color: #3e8ef7;
+    background: #d9e9ff;
+    padding: 2px;
+    border-radius: 2px;
+}
+.monitor-box .tree-box > ul li.current {
+    background-color: #3e8ef7;
+    color: #fff !important;
+}

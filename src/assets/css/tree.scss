@@ -1,0 +1,77 @@
+.tree_aside {
+    display: flex;
+    flex-direction: column;
+    width: 256px !important;
+    padding: 0 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-right: 20px;
+    margin-bottom: 1px;
+    overflow: hidden;
+    //搜索框样式
+    .filter_box {
+        padding: 15px 0px;
+        background-color: transparent;
+        flex: none;
+        .el-input__inner {
+            border-color: #ccd5db;
+        }
+    }
+    //列表额外名称样式
+    .name-box {
+        padding: 0 10px;
+        height: 32px;
+        line-height: 32px;
+        color: #a3afb7;
+        font-weight: 700;
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .title-box {
+        color: #666;
+        cursor: pointer;
+    }
+    .el-tree {
+        background: transparent;
+    }
+    .el-tree-node__content {
+        min-width: 100%; //20200427 width改为min-width
+        height: 32px;
+        box-sizing: border-box;
+    }
+    .custom-tree-node {
+        display: inline-block;
+        width: calc(100% - 24px);
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .el-tree-node {
+        .el-tree-node__content:hover,
+        &.is-current > .el-tree-node__content {
+            background-color: #3e8ef7;
+            color: #fff;
+        }
+    }
+}
+// .monitor .tree_aside {
+//     width: 100% !important;
+//     min-width: 200px !important;
+// }
+// 编辑、修改、删除按钮
+.tree_aside .table_btns {
+    margin-top: 18px;
+    .el-button {
+        padding: 8px !important;
+    }
+}
+.tree_aside .tree_box {
+    flex: 1;
+    overflow: auto;
+    // overflow-x:scroll!important ;
+}

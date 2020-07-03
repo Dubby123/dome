@@ -1,0 +1,10 @@
+{
+    "baseUrl": "http://172.16.2.38:8090",
+    "exUrl": {
+        "/hc-websocket": "",
+        "/hc-system": "",
+        "/hc-accesscontrol": "",
+        "/hc-filedfs": ""
+    },
+    "logoutUrl":""
+}

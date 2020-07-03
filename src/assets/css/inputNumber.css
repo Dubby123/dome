@@ -1,0 +1,36 @@
+/* InputNumber 计数器样式修改 */
+/* .main_body .el-input-number {
+    width: 120px;
+    margin-right: 5px;
+}
+.main_body .el-input-number {
+    line-height: 24px;
+}
+.el-input-number__decrease,
+.el-input-number__increase {
+    width: 25px;
+}
+.el-input-number.is-controls-right .el-input-number__decrease,
+.el-input-number.is-controls-right .el-input-number__increase {
+    height: 11px !important;
+    line-height: 11px !important;
+}
+.main_body [class*=' el-icon-'],
+[class^='el-icon-'] {
+    line-height: 11px;
+}
+.main_body .el-input-number .el-input__inner {
+    height: 24px;
+    line-height: 24px;
+    padding-right: 25px;
+    text-align: left;
+}
+.main_body .el-input-number.is-controls-right .el-input__inner {
+    padding-left: 20px;
+}
+.el-pagination .el-input__inner {
+    border-color: #ccc;
+} */
+.el-select {
+    width: 100%;
+}
